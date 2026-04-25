@@ -4,7 +4,7 @@
  */
 
 import { useState, useEffect, MouseEvent } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ShoppingBag, 
   Menu, 
