@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
 
   return {
-    base: '/Andini/',
+    base: '/andini/',
 
     plugins: [react(), tailwindcss()],
 
