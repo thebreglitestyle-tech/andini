@@ -5,16 +5,14 @@
 
 import { useState, useEffect, MouseEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ShoppingBag, 
-  Menu, 
-  X, 
-  Instagram, 
-  Twitter, 
-  MessageCircle, 
-  ArrowRight, 
-  Check, 
-  CreditCard, 
+import {
+  ShoppingBag,
+  Menu,
+  X,
+  Instagram,
+  MessageCircle,
+  Check,
+  CreditCard,
   ChevronLeft,
   ChevronRight,
   Share2,
@@ -23,18 +21,7 @@ import {
   Zap,
   PawPrint,
   Quote
-} from 'lucide-react';
-
-// --- Types ---
-interface Product {
-  id: string;
-  name: string;
-  price: number;
-  description: string;
-  image: string;
-  images: string[];
-  video?: string;
-  tag?: string;
+} from 'lucide-react';  tag?: string;
   rating: number;
   reviews: number;
 }
