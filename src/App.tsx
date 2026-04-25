@@ -1,40 +1,74 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
+export default function App() {
+  return (
+    <div style={{
+      fontFamily: "Arial, sans-serif",
+      background: "#f8f3ee",
+      color: "#222",
+      minHeight: "100vh"
+    }}>
+      <header style={{
+        padding: "20px 40px",
+        display: "flex",
+        justifyContent: "space-between",
+        borderBottom: "1px solid #ddd"
+      }}>
+        <h2>andini.studio</h2>
+        <div>Luxury Boho Bags</div>
+      </header>
 
-import { useState, useEffect, MouseEvent } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  ShoppingBag,
-  Menu,
-  X,
-  Instagram,
-  MessageCircle,
-  Check,
-  CreditCard,
-  ChevronLeft,
-  ChevronRight,
-  Share2,
-  Heart,
-  Star,
-  Zap,
-  PawPrint,
-  Quote
-} from 'lucide-react';  tag?: string;
-  rating: number;
-  reviews: number;
-}
+      <section style={{
+        textAlign: "center",
+        padding: "100px 20px"
+      }}>
+        <h1 style={{fontSize:"48px", marginBottom:"20px"}}>
+          Handcrafted Beach & Boho Bags
+        </h1>
+        <p style={{fontSize:"20px", opacity:.7}}>
+          Elegant handmade bags for modern women.
+        </p>
 
-// --- Constants ---
-const PRODUCTS: Product[] = [
-  {
-    id: '1',
-    name: 'The Coachella Muse',
-    price: 55,
-    description: 'Bespoke hand-knit tote featuring artisan embroidery. Perfect for festival season.',
-    image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=600&auto=format&fit=crop',
-    images: [
+        <button style={{
+          marginTop:"30px",
+          padding:"15px 30px",
+          fontSize:"18px",
+          border:"none",
+          background:"#c89b6d",
+          color:"#fff",
+          borderRadius:"8px"
+        }}>
+          Shop Now
+        </button>
+      </section>
+
+      <section style={{
+        display:"grid",
+        gridTemplateColumns:"repeat(auto-fit,minmax(250px,1fr))",
+        gap:"20px",
+        padding:"40px"
+      }}>
+        {["Beach Muse","Golden Coast","Summer Soul"].map((item)=>(
+          <div key={item} style={{
+            background:"#fff",
+            padding:"30px",
+            borderRadius:"12px",
+            boxShadow:"0 4px 10px rgba(0,0,0,.08)"
+          }}>
+            <h3>{item}</h3>
+            <p>Premium handwoven bag collection.</p>
+          </div>
+        ))}
+      </section>
+
+      <footer style={{
+        textAlign:"center",
+        padding:"40px",
+        opacity:.6
+      }}>
+        © 2026 andini.studio
+      </footer>
+    </div>
+  );
+}    images: [
       'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=800&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1591195853828-11db59a44f6b?q=80&w=800&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1598533330333-f17387cc873d?q=80&w=800&auto=format&fit=crop'
